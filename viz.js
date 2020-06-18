@@ -2643,13 +2643,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const svgWidth = 600;
     const svgHeight = 600;
 
-    const x_orig = 30; 
+    const x_orig = 60; 
     const y_orig = 75; 
     
     NUM_EL = 3
     elements = []
     for ( i=0; i< NUM_EL; i++) {
-      overlap_x = i*(x_orig/5*4) 
+      overlap_x = i*(x_orig/8*7) 
       var ellipse = {'x_axis': svgWidth/2-overlap_x, 'y_axis': svgHeight/2,
                     'colour': 'darkgrey', 'rx': x_orig, 'ry':y_orig};
       var ellipse2 = {'x_axis': svgWidth/2-overlap_x, 'y_axis': svgHeight/2-(y_orig-x_orig),
