@@ -2643,10 +2643,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const svgWidth = 600;
     const svgHeight = 600;
 
-    const x_orig = 60; 
+    const x_orig = 45; 
     const y_orig = 75; 
     
-    NUM_EL = 3
+    const NUM_EL = 5
     elements = []
     for ( i=0; i< NUM_EL; i++) {
       overlap_x = i*(x_orig/8*7) 
@@ -2668,6 +2668,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
       .attr('class', 'button')
       .attr('onclick', 'playMusic(\'stone_drop.wav\')')
       .text('Run Animation');
+
+    d3.select('body').append('p')
+      .attr('style', 'color:grey')
+      .text('Animation based on extracted pitch data from the .wav sound file. You may need to hit the animation button twice to get the sound to sync up.')
     
     d3.select('svg').selectAll('ellipse')
         .data(elements)
